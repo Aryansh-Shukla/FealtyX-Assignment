@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FealtyX-Assignment/static/css/main.9ea127ff.css",
+    "main.js": "/FealtyX-Assignment/static/js/main.74db15e2.js",
+    "index.html": "/FealtyX-Assignment/index.html",
+    "main.9ea127ff.css.map": "/FealtyX-Assignment/static/css/main.9ea127ff.css.map",
+    "main.74db15e2.js.map": "/FealtyX-Assignment/static/js/main.74db15e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ea127ff.css",
+    "static/js/main.74db15e2.js"
+  ]
+}
