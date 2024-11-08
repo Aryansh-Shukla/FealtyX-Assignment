@@ -1,6 +1,6 @@
 {
   "name": "enhanced-task-tracker",
-  "homepage": "https://Aryansh-Shukla.github.io/FealtyX-Assignment",
+  "homepage": "/FealtyX-Assignment",
   "version": "1.0.0",
   "description": "A bug/task tracker interface with features like login, dashboard, and task management",
   "main": "src/App.js",
@@ -15,7 +15,7 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
+    "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.7.4",
     "styled-components": "^5.3.0"

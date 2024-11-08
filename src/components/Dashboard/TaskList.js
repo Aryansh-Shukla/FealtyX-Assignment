@@ -1,30 +1,25 @@
+// src/components/Dashboard/TaskList.js
 import React from 'react';
-import { animated } from 'react-spring';
 import './TaskList.css';
 
-function TaskList({ tasks, deleteTask }) {
+const TaskList = ({ tasks }) => {
   return (
-    <div className="task-list-container">
-      <h3 style={{ width: '100%', textAlign: 'center', color: '#333' }}>Task List</h3>
+    <div className="task-list">
+      <h3>Task List</h3>
       {tasks.length === 0 ? (
-        <p style={{ width: '100%', textAlign: 'center', color: '#777' }}>No tasks available</p>
+        <p>No tasks available</p>
       ) : (
-        tasks.map((task) => (
-          <animated.div key={task.id} className="task-item">
-            <div className="task-item-header">{task.title}</div>
-            <div className="task-item-description">{task.description}</div>
-            <div className="task-item-footer">
-              <div className={`priority ${task.priority.toLowerCase()}`}>{task.priority}</div>
-              <div className={`status ${task.status.toLowerCase().replace(' ', '-')}`}>
-                {task.status}
-              </div>
-              <button onClick={() => deleteTask(task.id)}>Delete</button>
-            </div>
-          </animated.div>
+        tasks.map((task, index) => (
+          <div key={index} className="task">
+            <h4>{task.taskName}</h4>
+            <p><strong>Description:</strong> {task.description}</p>
+            <p><strong>Priority:</strong> {task.priority}</p>
+            <p><strong>Status:</strong> {task.status}</p>
+          </div>
         ))
       )}
     </div>
   );
-}
+};
 
 export default TaskList;

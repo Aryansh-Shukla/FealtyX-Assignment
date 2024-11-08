@@ -1,31 +1,9 @@
-.time-tracker-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+/* src/components/Dashboard/TimeTracker.css */
+.time-tracker {
     margin-top: 20px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
   }
   
-  h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #f9f9f9;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  li span {
-    font-weight: bold;
-    color: #3498db;
-  }

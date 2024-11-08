@@ -1,88 +1,22 @@
-.task-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+/* src/components/Dashboard/TaskList.css */
+.task-list {
+    margin-top: 20px;
   }
   
-  .task-item {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .task-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  }
-  
-  .task-item-header {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
+  .task {
+    padding: 15px;
     margin-bottom: 10px;
-  }
-  
-  .task-item-description {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .task-item-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .priority, .status {
-    padding: 5px 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 12px;
-    color: white;
   }
   
-  .priority.low {
-    background-color: #2ecc71; /* Green for low priority */
+  .task h4 {
+    margin: 0 0 5px;
   }
   
-  .priority.medium {
-    background-color: #f39c12; /* Yellow for medium priority */
-  }
-  
-  .priority.high {
-    background-color: #e74c3c; /* Red for high priority */
-  }
-  
-  .status.pending {
-    background-color: #f1c40f; /* Yellow for pending */
-  }
-  
-  .status.in-progress {
-    background-color: #3498db; /* Blue for in-progress */
-  }
-  
-  .status.completed {
-    background-color: #2ecc71; /* Green for completed */
-  }
-  
-  button {
-    background-color: #e74c3c;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .task p {
+    margin: 5px 0;
     font-size: 14px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #c0392b;
   }
   

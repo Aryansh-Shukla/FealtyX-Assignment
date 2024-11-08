@@ -1,79 +1,69 @@
+// src/components/Dashboard/TaskForm.js
 import React, { useState } from 'react';
 import './TaskForm.css';
 
-function TaskForm({ addTask }) {
-  const [taskData, setTaskData] = useState({
-    title: '',
-    description: '',
-    priority: 'Medium',
-    status: 'Pending',
-  });
+const TaskForm = ({ onAddTask }) => {
+  const [taskName, setTaskName] = useState('');
+  const [description, setDescription] = useState('');
+  const [priority, setPriority] = useState('Low');
+  const [status, setStatus] = useState('Pending');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setTaskData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addTask(taskData);
-    setTaskData({ title: '', description: '', priority: 'Medium', status: 'Pending' });
+  const addTask = () => {
+    if (taskName && description) {
+      onAddTask({
+        taskName,
+        description,
+        priority,
+        status
+      });
+      setTaskName('');
+      setDescription('');
+      setPriority('Low');
+      setStatus('Pending');
+    } else {
+      alert('Please fill in all fields');
+    }
   };
 
   return (
-    <div className="task-form-container">
-      <h3>Create New Task</h3>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          id="title"
-          name="title"
-          value={taskData.title}
-          onChange={handleChange}
-          required
-        />
+    <div className="task-form">
+      <input
+        type="text"
+        value={taskName}
+        placeholder="Task Name"
+        onChange={(e) => setTaskName(e.target.value)}
+      />
+      <textarea
+        value={description}
+        placeholder="Description"
+        onChange={(e) => setDescription(e.target.value)}
+      />
 
-        <label htmlFor="description">Description</label>
-        <textarea
-          id="description"
-          name="description"
-          value={taskData.description}
-          onChange={handleChange}
-          required
-        />
+      <label htmlFor="priority">Priority:</label>
+      <select
+        id="priority"
+        value={priority}
+        onChange={(e) => setPriority(e.target.value)}
+      >
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
 
-        <label htmlFor="priority">Priority</label>
-        <select
-          id="priority"
-          name="priority"
-          value={taskData.priority}
-          onChange={handleChange}
-        >
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
+      <label htmlFor="status">Status:</label>
+      <select
+        id="status"
+        value={status}
+        onChange={(e) => setStatus(e.target.value)}
+      >
+        <option value="Pending">Pending</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+      </select>
 
-        <label htmlFor="status">Status</label>
-        <select
-          id="status"
-          name="status"
-          value={taskData.status}
-          onChange={handleChange}
-        >
-          <option value="Pending">Pending</option>
-          <option value="In Progress">In Progress</option>
-          <option value="Completed">Completed</option>
-        </select>
-
-        <button type="submit">Add Task</button>
-      </form>
+      <button onClick={addTask}>Add Task</button>
     </div>
   );
-}
+};
 
 export default TaskForm;
