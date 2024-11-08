@@ -40,7 +40,7 @@ UI/UX
 <br> • Smooth animations for task interactions, such as hover effects and transitions.
 Technology Stack
 ### Frontend Framework: 
-React.js (Next.js)
+React.js
 ### Styling: 
 CSS and Styled Components
 ### State Management: 
